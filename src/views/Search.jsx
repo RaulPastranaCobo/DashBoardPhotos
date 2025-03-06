@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react'
-import Header from './components/header'
-import Footer from './components/Footer'
-import './styles/styles.scss'
-import ImageCard from './components/ImageCard'
-import NavBar from './components/NavBar'
-import MyPhotos from './views/MyPhotos'
-import { Routes, Route, Link, Router } from 'react-router-dom'
-import Search from './views/Search'
+import Header from '../components/header'
+import Footer from '../components/Footer'
+import '../styles/styles.scss'
+import ImageCard from '../components/ImageCard'
 
 
-function App() {
+
+
+function Search() {
   const [images, setImages] = useState([])
   const [selectedImage, setSelectedImage] = useState([])
   useEffect(()=>{
@@ -40,6 +38,7 @@ function App() {
       
       <Header />
       
+      
       <div className='todo'>
         {
           images.map((image)=>{
@@ -54,4 +53,4 @@ function App() {
   )
 }
 
-export default App;
+export default Search;
