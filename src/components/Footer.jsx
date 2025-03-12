@@ -1,5 +1,8 @@
 function Footer(){
-    return <div className="footer"><p>Footer</p></div>
+    return <div className="footer">
+        <p>Gijón, Asturias</p>
+                <p>wonderfulPhotos@gmail.com</p>
+            </div>
 }
 
 export default Footer;
