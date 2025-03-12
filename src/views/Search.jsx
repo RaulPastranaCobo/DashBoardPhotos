@@ -6,19 +6,11 @@ import ImageCard from '../components/ImageCard'
 
 
 
-
 function Search() {
   const [images, setImages] = useState([])
   const [selectedImage, setSelectedImage] = useState([])
   useEffect(()=>{
     const loadImages=async ()=>{
-    //   const imagesData=[{
-    //     id:1,
-    //     name:'Pepe'
-    //   },{
-    //     id:2,
-    //     name:'David'
-    //   }]
       const imagesData=await fetch(`https://api.unsplash.com/photos/random?count=20&client_id=Ncsrs9QjHqZ89ol6aEM3eDET2WwEkqEDm3OwKJBbG0c`)
       .then((res)=>res.json())
       .catch((err)=>console.log(err))
@@ -33,12 +25,10 @@ function Search() {
   const addImage = (image)=>{
     setSelectedImage([...selectedImage, image]);
   }
+
   return (
     <>
-      
       <Header />
-      
-      
       <div className='todo'>
         {
           images.map((image)=>{
