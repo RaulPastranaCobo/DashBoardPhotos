@@ -69,7 +69,6 @@ function MyPhotos() {
 
   return (
     <>
-      <Header />
       <Filter onFilter={filterPhotos} />
       <div className="selection">
         <select
@@ -87,7 +86,7 @@ function MyPhotos() {
       </div>
       <div className="galleryFavorite">
         {filteredPhotos.length === 0 ? (
-          <p>No hay fotos guardadas</p>
+          <p className="emptyPhotos">No hay fotos guardadas</p>
         ) : (
           <div className="galleryFavoriteImages">
             {filteredPhotos.map((image) => (

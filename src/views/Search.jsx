@@ -27,7 +27,6 @@ function Search() {
 
   return (
     <>
-      <Header />
       <div className="todo">
         {images.map((image) => {
           return (

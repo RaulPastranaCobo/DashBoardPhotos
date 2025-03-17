@@ -3,9 +3,11 @@ import { createRoot } from "react-dom/client";
 import Search from "./views/Search.jsx";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import MyPhotos from "./views/MyPhotos.jsx";
+import Header from "./components/header.jsx";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <Header />
     <BrowserRouter>
       <nav>
         <div className="navButtons">
